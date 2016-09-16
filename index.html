@@ -1,1 +1,169 @@
-Hello World
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>    <!--<base target="_blank">--><base href="." target="_blank">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"><style type="text/css">a{font-size: 24px; }
+a:hover{color:#F00}
+li{width: 150px;}
+.col-md-2{padding: 10px 20px 10px 0px;}
+.row{padding: 5px 0px;}
+#kw {
+  border: 0 none;
+  box-shadow: 0 1px 3px rgba(100, 100, 100, 0.8);
+  height: 40px;
+  line-height: 40px;
+  width:500px;
+  padding: 10px 10px 10px 10px;
+  font-size: 18px;
+  border-color: rgb(,0,0);
+  background-color:rgb(0,0,0);
+}
+#su{
+  cursor: pointer;
+  width: 80px;
+  height: 42px;
+  line-height: 380x;
+  padding: 0px 0px 0px 0px;
+  border: 0px none;
+  background: #38F none repeat scroll 0% 0%;
+  font-size: 18px;
+  color: #FFF;
+  box-shadow: none;
+  font-weight: normal;
+}
+.text-center{
+  padding: 5px 0px;
+}
+label{
+  font-size: 18px;
+  border-color: "#FF34B3"
+}
+body{
+  background-color: rgb(255,255,255);
+}
+a{
+  color: rgb(0,0,0);
+}
+canvas{
+  position:absolute;
+  top:0px;
+  right:0px
+}</style><title>Mypage</title>  <div class="text-center"><form id="tsf" action="http://www.baidu.com/s?ie=utf-8&amp;" method="GET" name="f" onsubmit="return q.value!=&#39;&#39;" role="search" class="tsf"><div id="tophf" data-jibp="" data-jiis="uc"><input name="newwindow" value="1" type="hidden">    <input name="safe" value="strict" type="hidden">    <input name="hl" value="zh-cn" type="hidden">    <input name="site" value="" type="hidden">    <input name="source" type="hidden" value="hp"></div>  <div class="tsf-p"><div id="logocont" class="nojsv logocont"><img width="665" height="220" src="./logo.gif" alt="baidu"></div>    <div class="sfibbbc"><div id="sbtc" class="sbtc"><div class="sbibtd"><input id="kw" maxlength="2048" name="wd" autocomplete="off" title="Google 搜索" type="text" value="" aria-label="搜索" aria-haspopup="false" role="combobox" aria-autocomplete="both" dir="ltr" spellcheck="false" style="background: url(&quot;data:http://www.google.com.hk/image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D&quot;) rgb(255,255,255);" class="gsfi">                  <input id="su" value="百度一下" aria-label="Google" name="btnK" type="submit" jsaction="sf.chk">                  <div id="gs_sc0" style="color: transparent" class="gsfi"></div>                  <input id="gs_taif0" disabled="" autocomplete="off" autocapitalize="off" aria-hidden="true" dir="ltr" style="border: none; padding: 0px; margin: 0px; height: auto; width: 100%; position: absolute; z-index: 1; -webkit-text-fill-color: silver; color: silver; left: 0px; visibility: hidden; background-color: transparent;" class="gsfi">                  <input id="gs_htif0" disabled="" autocomplete="off" autocapitalize="off" aria-hidden="true" dir="ltr" style="border: none; padding: 0px; margin: 0px; height: auto; width: 100%; position: absolute; z-index: 1; -webkit-text-fill-color: silver; color: silver; transition: all 0.218s; opacity: 0; text-align: left; left: 0px; background-color: transparent;" class="gsfi">      
+<br>          <input id="sp0" type="radio" name="sp" onchange="change(this)"><label for="sp0" style="color: gray">谷歌</label>                                       <input id="sp1" type="radio" name="sp" onchange="change(this)" checked=""><label for="sp1" style="color: red">百度</label></div></div></div></div>  <input type="hidden" name="oq">  <input type="hidden" name="gs_l"></form><canvas id="canvas" width="190" height="190" style="background-color:#FFF"></canvas></div><div class="container"><ul style="background-color:rgb(255,255,255)" class="list-unstyled text-center"><div class="row"><div class="col-md-2"><li><a href="http://weibo.com/">微博</a></li></div><div class="col-md-2"><li><a href="http://www.csdn.net/">CSDN</a></li></div><div class="col-md-2"><li><a href="http://mail.qq.com/">QQ邮箱</a></li></div><div class="col-md-2"><li><a href="http://baidu.com/">百度</a></li></div><div class="col-md-2"><li><a href="http://jd.com/">京东</a></li></div><div class="col-md-2"><li><a href="http://youku.com/">优酷</a></li></div></div><div class="row"><div class="col-md-2"><li><a href="http://i.qq.com/">空间</a></li></div><div class="col-md-2"><li><a href="http://www.bootcss.com/">Bootstrap</a></li></div><div class="col-md-2"><li><a href="https://mail.google.com/">Gmail邮箱</a></li></div><div class="col-md-2"><li><a href="https://www.google.com.hk/">谷歌</a></li></div><div class="col-md-2"><li><a href="http://www.tmall.com/">天猫</a></li></div><div class="col-md-2"><li><a href="http://www.iqiyi.com/">爱奇艺</a></li></div></div><div class="row"><div class="col-md-2"><li><a href="http://tieba.baidu.com/">贴吧</a></li></div><div class="col-md-2"><li><a href="http://www.cnblogs.com/">博客园</a></li></div><div class="col-md-2"><li><a href="http://www.126.com/">126邮箱</a></li></div><div class="col-md-2"><li><a href="http://www.sougou.com/">搜狗</a></li></div><div class="col-md-2"><li><a href="http://www.taobao.com/">淘宝</a></li></div><div class="col-md-2"><li><a href="http://music.163.com/">云音乐</a></li></div></div><div class="row"><div class="col-md-2"><li><a href="http://www.renren.com/">人人</a></li></div><div class="col-md-2"><li><a href="http://www.github.com/">Github</a></li></div><div class="col-md-2"><li><a href="http://emailgw.whu.edu.cn/coremail/">武大邮箱</a></li></div><div class="col-md-2"><li><a href="http://www.163.com/">网易</a></li></div><div class="col-md-2"><li><a href="http://www.dangdang.com/">当当</a></li></div><div class="col-md-2"><li><a href="http://www.xiami.com/">虾米</a></li></div></div><div class="row"><div class="col-md-2"><li><a href="http://www.douyutv.com/">斗鱼</a></li></div><div class="col-md-2"><li><a href="http://stackoverflow.com/">StackOF</a></li></div><div class="col-md-2"><li><a href="http://www.115.com/">163邮箱</a></li></div><div class="col-md-2"><li><a href="http://www.sina.com/">新浪</a></li></div><div class="col-md-2"><li><a href="http://www.amazon.com/">亚马逊</a></li></div><div class="col-md-2"><li><a href="http://sep.ucas.ac.cn/">SEP</a></li></div></div><div class="row"><div class="col-md-2"><li><a href="http://yunpan.360.cn/">360云盘</a></li></div><div class="col-md-2"><li><a href="http://www.115.com/">115网盘</a></li></div><div class="col-md-2"><li><a href="http://yun.baidu.com/">百度云盘</a></li></div><div class="col-md-2"><li><a href="http://www.boc.cn/">中国银行</a></li></div><div class="col-md-2"><li><a href="http://www.vip.com/">唯品会</a></li></div><div class="col-md-2"><li><a href="http://www.12306.cn/">12306</a></li></div></div></ul></div>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>  
+<script>document.getElementById('kw').focus();</script>
+<script type="text/javascript">function change(param){
+
+if (param.id=="sp0"){
+  $("#tsf").attr("action","https://www.google.com.hk/search")
+  $("#kw").attr("name","q")
+  $("#su").attr("value","谷歌一下")
+  $("[for= 'sp0']").attr("style","color: red")
+  $("[for= 'sp1']").attr("style","color: gray")
+}
+else {
+  $("#tsf").attr("action","http://www.baidu.com/s?ie=utf-8&")
+  $("#kw").attr("name","wd")
+  $("#su").attr("value","百度一下")
+  $("[for= 'sp1']").attr("style","color: red")
+  $("[for= 'sp0']").attr("style","color: gray")
+}
+}</script><script type="text/javascript">var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawdot(ctx,radius)
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, '#333');
+  grad.addColorStop(1, 'white');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawdot(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 60; num++){
+    ang = num * Math.PI / 30;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText('.', 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+  var now = new Date();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+      drawHand(ctx, minute, radius*0.8, radius*0.07);
+      // second
+      second=(second*Math.PI/30);
+      drawHand(ctx, second, radius*0.9, radius*0.02);
+    }
+
+    function drawHand(ctx, pos, length, width) {
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.lineCap = "round";
+      ctx.moveTo(0,0);
+      ctx.rotate(pos);
+      ctx.lineTo(0, -length);
+      ctx.stroke();
+      ctx.rotate(-pos);
+    }</script></body></html>
