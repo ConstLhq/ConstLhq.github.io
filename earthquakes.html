@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Leaflet.timeline</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+        <script src="../dist/leaflet.timeline.js"></script>
+        <script src="./message1.js"></script>
+        <script src="./line.js"></script>
+        <link rel="stylesheet" href="../dist/leaflet.timeline.min.css"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans); 
+      html, body{
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      #info{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 20vw;
+        padding: 1em;
+      }
+      #map{
+        position: fixed;
+        top: 0;
+        left: 25vw;
+        bottom: 0;
+        right: 0;
+      }
+      .leaflet-bottom.leaflet-left{
+        width: 100%;
+      }
+      .leaflet-control-container .leaflet-timeline-controls{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <h1>《毛主席年谱》</h1>
+      <h3>当前事件：</h3>
+      <ul id="displayed-list"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script>
+
+function updateList(timeline){
+        var displayed = timeline.getLayers();
+        var list = document.getElementById('displayed-list');
+        list.innerHTML = "";
+        displayed.forEach(function(quake){
+          
+          var li2 = document.createElement('li');
+          li2.innerHTML = "<p>"+"<strong>时间：</strong>"+quake.feature.properties.start+"</p>";
+          
+          var li4 = document.createElement('li');
+          li4.innerHTML = "<p>"+"<strong>地点：</strong>"+quake.feature.properties.location+"</p>";
+          
+          var li6 = document.createElement('li');
+          li6.innerHTML = "<p>"+"<strong>事务：</strong>"+quake.feature.properties.content+"</p>";
+          
+          list.appendChild(li2);
+          
+          list.appendChild(li4);
+         
+          list.appendChild(li6);
+        });
+      }
+
+$(document).ready(function () {
+  /*
+   * Create the map
+   */
+  map = L.map('map').setView([0, 0], 2);
+
+  L.tileLayer('https://{s}.tiles.mapbox.com/v3/ebrelsford.ho06j5h0/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      }).addTo(map);
+
+  var slider = L.timelineSliderControl({
+    formatOutput: function(date){
+      return moment(date).format("YYYY-MM-DD");
+    }
+  });
+  map.addControl(slider);
+
+  var pointTimeline = L.timeline(points);
+  pointTimeline.addTo(map);
+
+  var lineTimeline = L.timeline(line);
+  lineTimeline.addTo(map);
+
+
+  slider.addTimelines( lineTimeline,pointTimeline);
+
+  pointTimeline.on('change', function(e){
+          updateList(e.target);
+        });
+        updateList(pointTimeline);
+
+
+}); 
+    </script>
+  </body>
+</html>
