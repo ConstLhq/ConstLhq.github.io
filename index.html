@@ -73,11 +73,11 @@
   {id:9 ,href:"http://stackoverflow.com/" ,label:"Stack",group:1},
   {id:10 ,href:"http://www.cnblogs.com/" ,label:"博客园",group:1},
   {id:11 ,href:"" ,label:"邮箱",group:2},
-  {id:12 ,href:"https://mail.cstnet.cn/" ,label:"ucasMail",group:2},
-  {id:13 ,href:"https://mail.google.com/" ,label:"Gmail",group:2},
-  {id:14 ,href:"http://mail.qq.com/" ,label:"QQ邮箱",group:2},
-  {id:15 ,href:"http://www.126.com/" ,label:"126邮箱",group:2},
-  {id:16 ,href:"http://www.115.com/" ,label:"163邮箱",group:2},
+  {id:12 ,href:"https://mail.cstnet.cn/" ,label:"ucas邮",group:2},
+  {id:13 ,href:"https://mail.google.com/" ,label:"gmail邮",group:2},
+  {id:14 ,href:"http://mail.qq.com/" ,label:"qq邮",group:2},
+  {id:15 ,href:"http://www.126.com/" ,label:"126邮",group:2},
+  {id:16 ,href:"http://www.115.com/" ,label:"163邮",group:2},
   {id:17 ,href:"" ,label:"购物",group:3},
   {id:18 ,href:"http://jd.com/" ,label:"京东",group:3},
   {id:19 ,href:"https://2.taobao.com/" ,label:"闲鱼",group:3},
@@ -90,17 +90,17 @@
   {id:26 ,href:"https://www.google.com.hk/" ,label:"谷歌",group:4},
   {id:27 ,href:"http://www.sogou.com/" ,label:"搜狗",group:4},
   {id:28 ,href:"" ,label:"影音",group:5},
-  {id:29 ,href:"http://www.bilibili.com/" ,label:"哔哩哔哩",group:5},
+  {id:29 ,href:"http://www.bilibili.com/" ,label:"B站",group:5},
   {id:30 ,href:"http://www.iqiyi.com/" ,label:"爱奇艺",group:5},
-  {id:31 ,href:"http://music.163.com/" ,label:"网易音乐",group:5},
-  {id:32 ,href:"http://www.xiami.com/" ,label:"虾米音乐",group:5},
+  {id:31 ,href:"http://music.163.com/" ,label:"网易云",group:5},
+  {id:32 ,href:"http://www.xiami.com/" ,label:"虾米",group:5},
   {id:33 ,href:"http://youku.com/" ,label:"优酷",group:5},
   {id:34 ,href:"" ,label:"工具",group:6},
   {id:35 ,href:"http://sep.ucas.ac.cn/" ,label:"SEP",group:6},
   {id:36 ,href:"http://192.168.100.1/" ,label:"所内网",group:6},
-  {id:37 ,href:"http://yunpan.360.cn/" ,label:"360云盘",group:6},
-  {id:38 ,href:"http://www.115.com/" ,label:"115网盘",group:6},
-  {id:39 ,href:"http://yun.baidu.com/" ,label:"百度云盘",group:6},
+  {id:37 ,href:"http://yunpan.360.cn/" ,label:"360云",group:6},
+  {id:38 ,href:"http://www.115.com/" ,label:"115盘",group:6},
+  {id:39 ,href:"http://yun.baidu.com/" ,label:"百度云",group:6},
   {id:40 ,href:"http://www.12306.cn/" ,label:"12306",group:6},
   ]
   var nodes = new vis.DataSet(nodesData);
@@ -113,17 +113,16 @@
   };
   var options = {interaction:{hover:true}, 
   nodes: {
-    size: 60,
+    size: 40,
     font: {
-      size: 32,
+      size: 42,
       color: '#000000'
     },
     borderWidth: 1,
   },
-  layout: {randomSeed:189326},
+  layout: {randomSeed:516012},
  "physics": {
     "barnesHut": {
-      // "centralGravity": 0.2,
       "springLength": 90,
       "avoidOverlap": 0.1
     },
