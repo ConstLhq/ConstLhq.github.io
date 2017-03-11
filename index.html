@@ -111,7 +111,8 @@
     nodes: nodes,
     edges: edges
   };
-  var options = {interaction:{hover:true}, nodes: {
+  var options = {interaction:{hover:true}, 
+  nodes: {
     size: 60,
     font: {
       size: 32,
@@ -119,7 +120,14 @@
     },
     borderWidth: 1,
   },
-  layout: {randomSeed:195624}
+  layout: {randomSeed:189326},
+ "physics": {
+    "barnesHut": {
+      // "centralGravity": 0.2,
+      "springLength": 90,
+      "avoidOverlap": 0.1
+    },
+  }
 };
 var network = new vis.Network(container, data, options);
 network.on("click", function (params) {
@@ -130,7 +138,9 @@ network.on("click", function (params) {
   }
 });
 </script>
-<script>document.getElementById('kw').focus();</script>
+<script>document.getElementById('kw').focus();
+console.log(network.getSeed())
+</script>
 <script type = "text/javascript">
   function change(param) {
     if (param.id == "sp0") {
